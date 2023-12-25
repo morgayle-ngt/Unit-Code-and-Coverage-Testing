@@ -10,7 +10,7 @@ env:
   MONGO_USERNAME: superuser
   MONGO_PASSWORD: '${{ secrets.MONGO_PASSWORD }}'
   CONTAINER_REGISTRY: docker.io
-  IMAGE_NAME: 'ngtmike99/my-repo:mongo-db'
+  IMAGE_NAME: ngtmike99/my-repo:mongo-db
 jobs:
   unit-testing:
     name: Unit Testing
