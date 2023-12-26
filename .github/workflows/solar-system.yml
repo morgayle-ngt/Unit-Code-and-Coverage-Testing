@@ -10,7 +10,7 @@ env:
   MONGO_USERNAME: superuser
   MONGO_PASSWORD: '${{ secrets.MONGO_PASSWORD }}'
   CONTAINER_REGISTRY: docker.io
-  IMAGE_NAME: ngtmike99/my-repo:mongo-db
+  IMAGE_NAME: ngtmike99/mongo-db:non-prod
 jobs:
   unit-testing:
     name: Unit Testing
@@ -23,7 +23,7 @@ jobs:
       MONGO_PASSWORD: non-prod-password
     services:
       mongo:
-        image: 'ngtmike99/my-repo:mongo-db'
+        image: 'ngtmike99/mongo-db:non-prod'
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
